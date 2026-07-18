@@ -1,0 +1,12 @@
+# Docker build context — hou de image slank
+.git
+.gitignore
+.vscode
+.idea
+node_modules
+*.log
+README.md
+memory-bank
+Dockerfile
+docker-compose.yml
+.dockerignore

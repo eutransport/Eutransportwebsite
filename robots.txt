@@ -1,0 +1,8 @@
+# robots.txt — E&U Transport
+# https://www.eutransport.nl/
+
+User-agent: *
+Allow: /
+Disallow: /assets/img/README.md
+
+Sitemap: https://www.eutransport.nl/sitemap.xml

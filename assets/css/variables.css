@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Design Tokens — Fleetline
+   Chique, futuristisch, premium.
+   ========================================================================== */
+
+:root {
+    /* ---------- Colors: Deep & premium ---------- */
+    --color-bg:              #07090F;   /* near-black, deep navy tint */
+    --color-bg-elevated:     #0F1524;   /* elevated surfaces */
+    --color-surface:         #131A2B;   /* cards / header solid */
+    --color-border:          rgba(255, 255, 255, 0.08);
+
+    --color-text:            #EDEFF5;   /* soft white */
+    --color-text-muted:      #9AA3B8;   /* secondary text */
+    --color-text-subtle:     #5B6478;
+
+    /* Accent — conversion (offerte, whatsapp) */
+    --color-accent:          #E1B168;   /* champagne / warm gold */
+    --color-accent-hover:    #F0C480;
+    --color-accent-contrast: #0A0F1C;
+
+    /* Optional secondary accent (futuristic glow) */
+    --color-glow:            #4C7CF3;
+
+    /* ---------- Gradients ---------- */
+    --gradient-hero-overlay: linear-gradient(
+        180deg,
+        rgba(7, 9, 15, 0.35) 0%,
+        rgba(7, 9, 15, 0.75) 60%,
+        rgba(7, 9, 15, 0.95) 100%
+    );
+    --gradient-accent: linear-gradient(135deg, #E1B168 0%, #C48F3E 100%);
+
+    /* ---------- Typography ---------- */
+    --font-sans:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+
+    --fs-xs:   0.8125rem;   /* 13px */
+    --fs-sm:   0.9375rem;   /* 15px */
+    --fs-base: 1rem;        /* 16px */
+    --fs-md:   1.125rem;    /* 18px */
+    --fs-lg:   1.375rem;    /* 22px */
+    --fs-xl:   2rem;        /* 32px */
+    --fs-2xl:  clamp(2.5rem, 5vw + 1rem, 5rem);   /* hero */
+    --fs-3xl:  clamp(3rem, 6vw + 1rem, 6.5rem);
+
+    --lh-tight:   1.05;
+    --lh-snug:    1.25;
+    --lh-normal:  1.6;
+
+    --tracking-tight: -0.02em;
+    --tracking-wide:  0.18em;
+
+    /* ---------- Spacing ---------- */
+    --space-1:  0.25rem;
+    --space-2:  0.5rem;
+    --space-3:  0.75rem;
+    --space-4:  1rem;
+    --space-5:  1.5rem;
+    --space-6:  2rem;
+    --space-7:  3rem;
+    --space-8:  4rem;
+    --space-9:  6rem;
+    --space-10: 8rem;
+
+    /* ---------- Layout ---------- */
+    --container-max: 1280px;
+    --container-pad: clamp(1.25rem, 4vw, 3rem);
+    --header-height: 76px;
+
+    /* ---------- Radii, shadows, motion ---------- */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-pill: 999px;
+
+    --shadow-soft:  0 10px 30px rgba(0, 0, 0, 0.35);
+    --shadow-glow:  0 10px 40px rgba(225, 177, 104, 0.25);
+
+    --ease-out:  cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --dur-fast:   0.2s;
+    --dur-med:    0.4s;
+    --dur-slow:   0.8s;
+
+    /* ---------- Z-index ---------- */
+    --z-header:  100;
+    --z-overlay: 50;
+}

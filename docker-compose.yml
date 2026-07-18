@@ -1,0 +1,25 @@
+# ============================================================
+# E&U Transport — Docker Compose stack
+# Hangt aan het BESTAANDE tms_external netwerk zodat de
+# reeds draaiende NPM (tms_npm) deze site kan bereiken.
+# ============================================================
+
+services:
+  eutransport-web:
+    build: .
+    image: eutransport-web:latest
+    container_name: eutransport-web
+    restart: unless-stopped
+    expose:
+      - "80"                       # alleen intern bereikbaar (via NPM)
+    networks:
+      - proxy
+    labels:
+      - "com.eutransport.role=web"
+
+networks:
+  proxy:
+    # Externe (reeds bestaande) NPM-netwerk uit de tmsapp stack.
+    # Overschrijfbaar via PROXY_NETWORK in .env.
+    name: ${PROXY_NETWORK:-tms_external}
+    external: true

@@ -1,0 +1,22 @@
+{
+    "name": "E&U Transport",
+    "short_name": "E&U Transport",
+    "description": "Charter- en groupagetransport uit Ede, door heel Europa.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#07090F",
+    "theme_color": "#0A0F1C",
+    "lang": "nl-NL",
+    "icons": [
+        {
+            "src": "assets/img/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "assets/img/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}
