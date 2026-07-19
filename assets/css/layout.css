@@ -1,5 +1,5 @@
-/* ==========================================================================
-   Layout — Fleetline
+﻿/* ==========================================================================
+   Layout â€” Fleetline
    BEM: .block, .block__element, .block--modifier
    ========================================================================== */
 
@@ -79,7 +79,7 @@ button { font: inherit; cursor: pointer; }
 }
 .btn--accent:hover {
     background: var(--color-accent-hover);
-    box-shadow: 0 14px 50px rgba(225, 177, 104, 0.4);
+    box-shadow: 0 14px 50px rgba(111, 180, 255, 0.4);
 }
 
 .btn--ghost {
@@ -96,7 +96,7 @@ button { font: inherit; cursor: pointer; }
 .btn--small { padding: 0.6rem 1.2rem; font-size: var(--fs-xs); }
 
 /* ==========================================================================
-   HEADER — sticky, transparent → solid on scroll
+   HEADER â€” sticky, transparent â†’ solid on scroll
    ========================================================================== */
 .header {
     position: fixed;
@@ -137,10 +137,9 @@ button { font: inherit; cursor: pointer; }
     height: 36px;
     width: auto;
 }
-/* Fallback tekst-logo — verborgen zodra logo.svg laadt.
-   Bij load-fout toont onerror-handler in HTML deze weer. */
+/* Fallback tekst-logo â€” nu standaard zichtbaar (afbeelding-logo verwijderd). */
 .header__logo-fallback {
-    display: none;
+    display: inline-flex;
     align-items: center;
     gap: 0.6rem;
 }
@@ -169,11 +168,12 @@ button { font: inherit; cursor: pointer; }
 .nav__link {
     position: relative;
     font-size: var(--fs-sm);
-    font-weight: 500;
-    color: var(--color-text-muted);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-text);
     transition: color var(--dur-fast) var(--ease-out);
 }
-.nav__link:hover { color: var(--color-text); }
+.nav__link:hover { color: var(--color-accent); }
 .nav__link::after {
     content: '';
     position: absolute;
@@ -211,7 +211,7 @@ button { font: inherit; cursor: pointer; }
     z-index: -2;
     background-image:
         linear-gradient(120deg, rgba(76, 124, 243, 0.08), transparent 60%),
-        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2400&q=80');
+        url('../img/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -309,7 +309,7 @@ button { font: inherit; cursor: pointer; }
     50%      { opacity: 1;   transform: scaleY(1);   transform-origin: top; }
 }
 
-/* Hero — mobile tweaks */
+/* Hero â€” mobile tweaks */
 @media (max-width: 640px) {
     .hero { min-height: 92vh; text-align: left; }
     .hero__content { text-align: left; }
@@ -452,7 +452,7 @@ button { font: inherit; cursor: pointer; }
 .section__header--center .section__lead { margin-inline: auto; max-width: 640px; }
 
 /* ==========================================================================
-   ENTRANCE ANIMATIONS (Pure CSS — geen JS-dependency)
+   ENTRANCE ANIMATIONS (Pure CSS â€” geen JS-dependency)
    ========================================================================== */
 
 /* -- Hero: teksten schuiven van onderen in, gestaggerd -- */
@@ -508,7 +508,7 @@ button { font: inherit; cursor: pointer; }
     filter: blur(0);
 }
 
-/* Child stagger — elk kind komt in vloeiend na elkaar omhoog */
+/* Child stagger â€” elk kind komt in vloeiend na elkaar omhoog */
 .stagger > * {
     opacity: 0;
     transform: translateY(40px);
@@ -567,7 +567,7 @@ button { font: inherit; cursor: pointer; }
 .media-frame__glow {
     position: absolute;
     inset: -40%;
-    background: radial-gradient(circle at 30% 20%, rgba(225,177,104,0.28), transparent 55%);
+    background: radial-gradient(circle at 30% 20%, rgba(111,180,255,0.30), transparent 55%);
     pointer-events: none;
     mix-blend-mode: screen;
 }
@@ -661,7 +661,7 @@ button { font: inherit; cursor: pointer; }
         box-shadow var(--dur-med) var(--ease-out);
 }
 .job::before {
-    /* subtiele gouden lichtstreep bovenaan */
+    /* subtiele blauwe lichtstreep bovenaan */
     content: '';
     position: absolute;
     inset: 0 0 auto 0;
@@ -672,7 +672,7 @@ button { font: inherit; cursor: pointer; }
 }
 .job:hover {
     transform: translateY(-6px);
-    border-color: rgba(225, 177, 104, 0.35);
+    border-color: rgba(111, 180, 255, 0.40);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 }
 .job:hover::before { opacity: 1; }
@@ -739,7 +739,7 @@ button { font: inherit; cursor: pointer; }
     width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(225, 177, 104, 0.12);
+    box-shadow: 0 0 0 3px rgba(111, 180, 255, 0.15);
 }
 
 .job__cta {
@@ -815,7 +815,7 @@ button { font: inherit; cursor: pointer; }
     width: 34px; height: 34px;
     display: inline-flex; align-items: center; justify-content: center;
     border-radius: 50%;
-    background: rgba(225, 177, 104, 0.1);
+    background: rgba(111, 180, 255, 0.12);
     color: var(--color-accent);
     font-size: 0.85rem;
 }
@@ -831,7 +831,7 @@ button { font: inherit; cursor: pointer; }
 }
 
 .contact-form__hp {
-    /* Honeypot — visueel verborgen, maar bereikbaar voor bots */
+    /* Honeypot â€” visueel verborgen, maar bereikbaar voor bots */
     position: absolute !important;
     left: -10000px !important;
     width: 1px; height: 1px;
@@ -877,7 +877,7 @@ button { font: inherit; cursor: pointer; }
     outline: none;
     border-color: var(--color-accent);
     background: var(--color-bg-elevated);
-    box-shadow: 0 0 0 3px rgba(225, 177, 104, 0.18);
+    box-shadow: 0 0 0 3px rgba(111, 180, 255, 0.22);
 }
 .contact-form__input--sm { max-width: 120px; }
 .contact-form__textarea { resize: vertical; min-height: 140px; }
@@ -937,7 +937,7 @@ button { font: inherit; cursor: pointer; }
     transform: rotate(45deg) scale(1);
 }
 .contact-form__check input:focus-visible + .contact-form__check-box {
-    box-shadow: 0 0 0 3px rgba(225, 177, 104, 0.25);
+    box-shadow: 0 0 0 3px rgba(111, 180, 255, 0.30);
 }
 
 .contact-form__math {
@@ -1029,7 +1029,7 @@ button { font: inherit; cursor: pointer; }
         max-width: 100%;
     }
 
-    /* Header: kleinere gap zodat CTA + logo op één regel passen */
+    /* Header: kleinere gap zodat CTA + logo op Ã©Ã©n regel passen */
     .header__inner { gap: var(--space-4); padding-inline: var(--container-pad); }
     .header__logo-img { height: 30px; }
     .btn--small { padding: 0.55rem 1rem; font-size: 0.8rem; }
@@ -1099,3 +1099,265 @@ button { font: inherit; cursor: pointer; }
         font-size: 16px;
     }
 }
+
+
+/* ==========================================================================
+   FLEET CAROUSEL (Wagenpark showcase)
+   ========================================================================== */
+.fleet-carousel-wrap {
+    margin-top: var(--space-8);
+    padding-top: var(--space-7);
+    border-top: 1px solid var(--color-border);
+}
+
+.fleet-carousel-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto var(--space-6);
+}
+.fleet-carousel-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 2.2vw + 1rem, 2.4rem);
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: var(--tracking-tight);
+    margin: var(--space-2) 0 var(--space-3);
+}
+.fleet-carousel-lead {
+    color: var(--color-text-muted);
+    line-height: var(--lh-normal);
+}
+
+.fleet-carousel {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "prev viewport next"
+        "dots dots dots";
+    gap: var(--space-4);
+    align-items: center;
+}
+
+.fleet-carousel__viewport {
+    grid-area: viewport;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+    aspect-ratio: 16 / 9;
+}
+
+.fleet-carousel__track {
+    position: relative;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fleet-carousel__slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition:
+        opacity 1s var(--ease-in-out),
+        visibility 0s linear 1s;
+}
+.fleet-carousel__slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    transition:
+        opacity 1s var(--ease-in-out),
+        visibility 0s linear 0s;
+}
+.fleet-carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.06);
+    transition: transform 6s var(--ease-out), filter 1s var(--ease-out);
+    filter: brightness(0.9) saturate(1.05);
+}
+.fleet-carousel__slide.is-active img {
+    transform: scale(1);
+    filter: brightness(1) saturate(1.1);
+}
+
+/* Overlay gradient onder caption */
+.fleet-carousel__slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+        rgba(7, 9, 15, 0) 40%,
+        rgba(7, 9, 15, 0.55) 75%,
+        rgba(7, 9, 15, 0.92) 100%);
+    pointer-events: none;
+}
+
+.fleet-carousel__caption {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: var(--space-6) var(--space-6) var(--space-5);
+    color: var(--color-text);
+    z-index: 2;
+    transform: translateY(24px);
+    opacity: 0;
+    transition:
+        transform 0.7s var(--ease-out) 0.15s,
+        opacity 0.7s var(--ease-out) 0.15s;
+}
+.fleet-carousel__slide.is-active .fleet-carousel__caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+.fleet-carousel__tag {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--color-accent);
+    background: rgba(111, 180, 255, 0.12);
+    border: 1px solid rgba(111, 180, 255, 0.35);
+    padding: 0.25rem 0.7rem;
+    border-radius: var(--radius-pill);
+    margin-bottom: var(--space-3);
+}
+.fleet-carousel__caption h4 {
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 1.4vw + 1rem, 1.75rem);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: 0.35rem;
+}
+.fleet-carousel__caption p {
+    color: var(--color-text-muted);
+    max-width: 44ch;
+    line-height: var(--lh-normal);
+}
+
+/* Progress bar (auto-play indicator) */
+.fleet-carousel__viewport::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    height: 3px;
+    width: 100%;
+    background: var(--gradient-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 3;
+    pointer-events: none;
+    transition: transform 0.2s linear;
+}
+.fleet-carousel.is-playing .fleet-carousel__viewport::before {
+    transform: scaleX(var(--progress, 0));
+}
+
+/* Nav buttons */
+.fleet-carousel__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    cursor: pointer;
+    transition:
+        transform var(--dur-fast) var(--ease-out),
+        border-color var(--dur-fast) var(--ease-out),
+        background var(--dur-fast) var(--ease-out),
+        color var(--dur-fast) var(--ease-out),
+        box-shadow var(--dur-fast) var(--ease-out);
+}
+.fleet-carousel__btn:hover {
+    background: var(--color-accent);
+    color: var(--color-accent-contrast);
+    border-color: var(--color-accent);
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(111, 180, 255, 0.35);
+}
+.fleet-carousel__btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(111, 180, 255, 0.35);
+}
+.fleet-carousel__btn--prev { grid-area: prev; }
+.fleet-carousel__btn--next { grid-area: next; }
+
+/* Dots */
+.fleet-carousel__dots {
+    grid-area: dots;
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: var(--space-3);
+}
+.fleet-carousel__dot {
+    width: 30px;
+    height: 4px;
+    border-radius: var(--radius-pill);
+    border: none;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    transition: background var(--dur-fast) var(--ease-out), width var(--dur-med) var(--ease-out);
+}
+.fleet-carousel__dot:hover { background: rgba(255, 255, 255, 0.35); }
+.fleet-carousel__dot.is-active {
+    background: var(--color-accent);
+    width: 46px;
+}
+.fleet-carousel__dot:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(111, 180, 255, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+    .fleet-carousel {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "viewport"
+            "dots";
+    }
+    .fleet-carousel__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 4;
+        width: 40px;
+        height: 40px;
+        background: rgba(15, 21, 36, 0.7);
+        backdrop-filter: blur(6px);
+    }
+    .fleet-carousel__btn--prev { left: 0.6rem; }
+    .fleet-carousel__btn--next { right: 0.6rem; }
+    .fleet-carousel__viewport { aspect-ratio: 4 / 3; }
+    .fleet-carousel__caption { padding: var(--space-4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fleet-carousel__track,
+    .fleet-carousel__slide img,
+    .fleet-carousel__caption {
+        transition: none !important;
+    }
+    .fleet-carousel__slide img { transform: none; }
+}
+

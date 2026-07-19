@@ -164,8 +164,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
     <!-- ============ STYLESHEETS ============ -->
-    <link rel="stylesheet" href="assets/css/variables.css?v=8" />
-    <link rel="stylesheet" href="assets/css/layout.css?v=8" />
+    <link rel="stylesheet" href="assets/css/variables.css?v=11" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=11" />
 </head>
 <body class="page">
 
@@ -173,8 +173,6 @@
     <header class="header" id="siteHeader">
         <div class="header__inner">
             <a href="#" class="header__logo" aria-label="E&amp;U Transport homepage">
-                <img src="assets/img/logo.svg" alt="E&amp;U Transport" class="header__logo-img"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
                 <span class="header__logo-fallback">
                     <span class="header__logo-mark">◆</span>
                     <span class="header__logo-text">E&amp;U TRANSPORT</span>
@@ -285,6 +283,74 @@
                     </p>
                 </div>
             </article>
+
+            <!-- ============ WAGENPARK CAROUSEL ============ -->
+            <div class="fleet-carousel-wrap" data-reveal="up">
+                <header class="fleet-carousel-header">
+                    <span class="section__eyebrow">In beeld</span>
+                    <h3 class="fleet-carousel-title">Ons wagenpark in actie</h3>
+                    <p class="fleet-carousel-lead">
+                        Een greep uit onze trekkers, opleggers en trailers &mdash; onderweg door heel Europa.
+                    </p>
+                </header>
+
+                <div class="fleet-carousel" data-carousel aria-roledescription="carousel" aria-label="Foto's van ons wagenpark">
+                    <button class="fleet-carousel__btn fleet-carousel__btn--prev" type="button" data-carousel-prev aria-label="Vorige foto">
+                        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+
+                    <div class="fleet-carousel__viewport" data-carousel-viewport>
+                        <ul class="fleet-carousel__track" data-carousel-track>
+                            <li class="fleet-carousel__slide is-active" aria-roledescription="slide" aria-label="1 van 4">
+                                <img src="assets/img/wagenpark-man-trekker-charter.jpg"
+                                     alt="M.A.N. trekker voor internationaal chartertransport"
+                                     loading="lazy" decoding="async" />
+                                <div class="fleet-carousel__caption">
+                                    <span class="fleet-carousel__tag">Trekker</span>
+                                    <h4>M.A.N. charter</h4>
+                                    <p>Krachtige M.A.N. trekker voor lange-afstand charterritten door Europa.</p>
+                                </div>
+                            </li>
+                            <li class="fleet-carousel__slide" aria-roledescription="slide" aria-label="2 van 4">
+                                <img src="assets/img/wagenpark-oplegger-groupage-europa.jpg"
+                                     alt="Oplegger voor groupage transport in Europa"
+                                     loading="lazy" decoding="async" />
+                                <div class="fleet-carousel__caption">
+                                    <span class="fleet-carousel__tag">Oplegger</span>
+                                    <h4>Groupage-oplegger</h4>
+                                    <p>Modulaire ruimte voor gedeelde ladingen &mdash; effici&euml;nt en flexibel.</p>
+                                </div>
+                            </li>
+                            <li class="fleet-carousel__slide" aria-roledescription="slide" aria-label="3 van 4">
+                                <img src="assets/img/wagenpark-koeltrailer-internationaal-transport.jpg"
+                                     alt="Koeltrailer voor internationaal geconditioneerd transport"
+                                     loading="lazy" decoding="async" />
+                                <div class="fleet-carousel__caption">
+                                    <span class="fleet-carousel__tag">Trailer</span>
+                                    <h4>Internationaal transport</h4>
+                                    <p>Betrouwbare trailers voor grensoverschrijdende ritten door de EU.</p>
+                                </div>
+                            </li>
+                            <li class="fleet-carousel__slide" aria-roledescription="slide" aria-label="4 van 4">
+                                <img src="assets/img/wagenpark-eutransport-vrachtwagen-ede.jpg"
+                                     alt="E&amp;U Transport vrachtwagen uit Ede onderweg"
+                                     loading="lazy" decoding="async" />
+                                <div class="fleet-carousel__caption">
+                                    <span class="fleet-carousel__tag">E&amp;U Transport</span>
+                                    <h4>Onderweg vanuit Ede</h4>
+                                    <p>Ons visitekaartje op de weg &mdash; strak onderhouden en herkenbaar.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="fleet-carousel__btn fleet-carousel__btn--next" type="button" data-carousel-next aria-label="Volgende foto">
+                        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+
+                    <div class="fleet-carousel__dots" data-carousel-dots role="tablist" aria-label="Kies foto"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -475,8 +541,6 @@
     <footer class="footer" id="footer">
         <div class="footer__inner">
             <div class="footer__brand">
-                <img src="assets/img/logo.svg" alt="E&amp;U Transport" class="footer__logo-img"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
                 <span class="footer__logo">◆ E&amp;U TRANSPORT</span>
                 <p class="footer__tagline">Premium charter- en groupagetransport door heel Europa.</p>
             </div>
@@ -519,7 +583,7 @@
 
     <!-- ============ Site scripts ============ -->
     <script src="assets/js/navigation.js?v=5" defer></script>
-    <script src="assets/js/animations.js?v=5" defer></script>
+    <script src="assets/js/animations.js?v=8" defer></script>
     <script src="assets/js/contact.js?v=5" defer></script>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();

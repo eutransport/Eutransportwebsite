@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="E&amp;U Transport">
+  <defs>
+    <linearGradient id="fBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#7CC4FF"/>
+      <stop offset="100%" stop-color="#1E6FE0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0E1A33"/>
+  <path d="M20 46 L28 18 L36 18 L44 46 L36 46 L34.5 40 L29.5 40 L28 46 Z"
+        fill="url(#fBlue)"/>
+  <rect x="30.5" y="24" width="3" height="14" rx="1" fill="#EDEFF5" opacity="0.85"/>
+</svg>

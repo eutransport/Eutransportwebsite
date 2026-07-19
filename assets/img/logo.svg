@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 720" role="img" aria-label="E&amp;U Transport">
+  <title>E&amp;U Transport</title>
+  <defs>
+    <!-- Baby blue → deep sky gradient (top of letters) -->
+    <linearGradient id="euBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#7CC4FF"/>
+      <stop offset="55%"  stop-color="#3F8BE8"/>
+      <stop offset="100%" stop-color="#1E6FE0"/>
+    </linearGradient>
+    <!-- Dark navy bottom (as in reference logo) -->
+    <linearGradient id="euNavy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0E1A33"/>
+      <stop offset="100%" stop-color="#050A18"/>
+    </linearGradient>
+    <!-- Road perspective gradient -->
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0E1A33"/>
+      <stop offset="100%" stop-color="#1B2A4A"/>
+    </linearGradient>
+
+    <!-- Clip: bovenste helft van de letters (blauw) -->
+    <clipPath id="topHalf">
+      <rect x="0" y="0" width="860" height="290"/>
+    </clipPath>
+    <!-- Clip: onderste helft van de letters (navy) -->
+    <clipPath id="bottomHalf">
+      <rect x="0" y="290" width="860" height="290"/>
+    </clipPath>
+  </defs>
+
+  <!-- ===================== EU LETTERS ===================== -->
+  <!-- "E" -->
+  <g font-family="'Space Grotesk','Inter',system-ui,sans-serif"
+     font-weight="900" font-size="440" letter-spacing="-6">
+    <text x="40"  y="450" fill="url(#euBlue)" clip-path="url(#topHalf)">E</text>
+    <text x="40"  y="450" fill="url(#euNavy)" clip-path="url(#bottomHalf)">E</text>
+
+    <!-- "U" -->
+    <text x="430" y="450" fill="url(#euBlue)" clip-path="url(#topHalf)">U</text>
+    <text x="430" y="450" fill="url(#euNavy)" clip-path="url(#bottomHalf)">U</text>
+  </g>
+
+  <!-- ===================== WEG / ROAD ===================== -->
+  <!-- Weg loopt tussen E en U omhoog, perspectief -->
+  <g>
+    <polygon points="330,560 530,560 470,120 390,120" fill="url(#road)"/>
+    <!-- Middenstreep (onderbroken) -->
+    <g fill="#EDEFF5">
+      <rect x="425" y="150" width="10" height="30" rx="2"/>
+      <rect x="423" y="210" width="14" height="34" rx="2"/>
+      <rect x="420" y="278" width="20" height="40" rx="2"/>
+      <rect x="416" y="352" width="28" height="46" rx="3"/>
+      <rect x="411" y="432" width="38" height="54" rx="3"/>
+      <rect x="405" y="518" width="50" height="42" rx="4"/>
+    </g>
+  </g>
+
+  <!-- ===================== TRANSPORT ===================== -->
+  <g font-family="'Space Grotesk','Inter',system-ui,sans-serif"
+     font-weight="800" letter-spacing="18">
+    <text x="430" y="680" font-size="120" fill="#6FB4FF" text-anchor="middle">TRANSPORT</text>
+  </g>
+</svg>

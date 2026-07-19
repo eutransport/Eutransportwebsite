@@ -15,9 +15,9 @@
     --color-text-subtle:     #5B6478;
 
     /* Accent — conversion (offerte, whatsapp) */
-    --color-accent:          #E1B168;   /* champagne / warm gold */
-    --color-accent-hover:    #F0C480;
-    --color-accent-contrast: #0A0F1C;
+    --color-accent:          #6FB4FF;   /* baby blue / sky */
+    --color-accent-hover:    #A5D4FF;
+    --color-accent-contrast: #07111F;
 
     /* Optional secondary accent (futuristic glow) */
     --color-glow:            #4C7CF3;
@@ -29,7 +29,7 @@
         rgba(7, 9, 15, 0.75) 60%,
         rgba(7, 9, 15, 0.95) 100%
     );
-    --gradient-accent: linear-gradient(135deg, #E1B168 0%, #C48F3E 100%);
+    --gradient-accent: linear-gradient(135deg, #A5D4FF 0%, #1E6FE0 100%);
 
     /* ---------- Typography ---------- */
     --font-sans:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -75,7 +75,7 @@
     --radius-pill: 999px;
 
     --shadow-soft:  0 10px 30px rgba(0, 0, 0, 0.35);
-    --shadow-glow:  0 10px 40px rgba(225, 177, 104, 0.25);
+    --shadow-glow:  0 10px 40px rgba(111, 180, 255, 0.28);
 
     --ease-out:  cubic-bezier(0.22, 1, 0.36, 1);
     --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
