@@ -12,6 +12,17 @@
     document.documentElement.classList.remove('no-js');
     document.documentElement.classList.add('js');
 
+    // Voorkom dat de browser automatisch de vorige scroll-positie herstelt.
+    // Anders start de pagina soms halverwege waardoor GSAP-scrub direct
+    // .hero__content op opacity 0 zet (hero-tekst "verdwijnt" tot je terug scrollt).
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    // Alleen naar top forceren als er GEEN hash in de URL staat
+    if (!window.location.hash) {
+        window.scrollTo(0, 0);
+    }
+
     const prefersReducedMotion =
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -95,6 +106,7 @@
             yPercent: -40,
             opacity: 0,
             ease: 'none',
+            immediateRender: false,
             scrollTrigger: {
                 trigger: heroSect,
                 start: 'top top',
@@ -102,6 +114,12 @@
                 scrub: 0.6
             }
         });
+    }
+
+    // Zodra alles klaar is: herbereken ScrollTrigger-posities. Voorkomt dat
+    // hero-tekst opacity 0 blijft als layout later verandert (fonts, images).
+    if (window.ScrollTrigger && typeof ScrollTrigger.refresh === 'function') {
+        window.addEventListener('load', () => ScrollTrigger.refresh());
     }
 
     // Parallax op de Over Ons foto
