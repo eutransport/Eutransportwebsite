@@ -461,8 +461,23 @@ button { font: inherit; cursor: pointer; }
     to   { opacity: 1; transform: translateY(0);    filter: blur(0);   }
 }
 .hero [data-animate="fade-up"] {
-    opacity: 0;
-    animation: heroFadeUp 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    /* Fallback: altijd zichtbaar als animatie niet start (reduced-motion, oude CSS-cache, etc.) */
+    opacity: 1;
+    animation: heroFadeUp 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+/* Alleen als de browser animaties toestaat, verbergen we vóór de start */
+@media (prefers-reduced-motion: no-preference) {
+    .hero [data-animate="fade-up"] { opacity: 0; }
+    .hero [data-animate="fade-up"][style],
+    .hero [data-animate="fade-up"] { animation-fill-mode: forwards; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero [data-animate="fade-up"] {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
 }
 .hero .hero__eyebrow  { animation-delay: 0.15s; }
 .hero .hero__title    { animation-delay: 0.35s; }
